@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="tbl_container">
+      <h2>Processed Orders</h2>
+      <table class="tbl">
+          <thead>
+              <tr>
+                  <th>Order No</th>
+                  <th>Order Date</th>
+                  <th>Food Item</th>
+                  <th>Quantity</th>
+                  <th>Status</th>
+              </tr>
+          </thead>
+          <tbody>
+             <!-- dynamic -->
+              <tr *ngFor="let foodItem of foodItems">
+              <td>{{ foodItem.orderno }}</td>
+              <td>{{ foodItem.orderdate }}</td>
+              <td>{{ foodItem.productName }}</td>
+              <td>{{ foodItem.quantity }}</td>
+              <td><i class="uil uil-check"></i> {{ foodItem.status }}</td>
+            </tr>
+          </tbody>
+      </table>
+  </div>
+</div>

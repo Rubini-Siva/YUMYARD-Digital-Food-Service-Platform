@@ -1,0 +1,14 @@
+<div class="menu-modal">
+  <div class="modal-content">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <h2>Menu for {{ selectedRestaurant?.resname }}</h2>
+    <div class="list">
+      <div class="item" *ngFor="let menuItem of menuItems">
+        <img [src]="menuItem.product_image" alt="{{menuItem.product_name}}">
+        <div class="title">{{ menuItem.product_name }}</div>
+        <div class="price">Price: {{ menuItem.product_price }}</div>
+        <button class="btn add-to-cart-btn">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>

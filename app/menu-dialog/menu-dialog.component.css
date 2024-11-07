@@ -1,0 +1,52 @@
+/* menu-dialog.component.css */
+
+/* Center the dialog */
+.mat-dialog-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style dialog title */
+.dialog-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Style dialog content */
+.dialog-content {
+  text-align: center;
+}
+
+/* Style menu table */
+.menu-table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 2px solid #ff0404;
+}
+
+.menu-table th, .menu-table td {
+  border: 2px solid #f41e1e;
+  padding: 10px;
+}
+
+/* Style product image */
+.product-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 25%;
+}
+
+/* Style cart icon */
+.cart-icon {
+  font-size: 24px;
+  color: #007bff;
+  cursor: pointer;
+}
+
+/* Style dialog actions */
+.mat-dialog-actions {
+  justify-content: center;
+}

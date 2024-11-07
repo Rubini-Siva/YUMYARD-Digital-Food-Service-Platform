@@ -1,0 +1,51 @@
+<body>
+  <div class="container">
+    <div class="title">Sign Up</div>
+    <div class="content">
+      <form id="registration-form" #form="ngForm" (ngSubmit)="onSubmit(form)" (click)="validateForm()">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Name</span>
+            <input type="text" id="name" placeholder="Enter your Name" name="name" required ngModel #name="ngModel">
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" id="email" placeholder="Enter your email" name="email" required ngModel #email="ngModel">
+          </div>
+          <div class="input-box">
+            <span class="details">Contact Number</span>
+            <input type="tel" id="phone" placeholder="Enter your contact number" name="phone" length=10 required ngModel #phone="ngModel">
+          </div>
+          <div class="input-box">
+            <span class="details">Address</span>
+            <textarea id="address" id="address" placeholder="Enter your Address" name="address" rows="3" cols="10" required ngModel #address="ngModel"></textarea>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <div class="password-input-container">
+              <input type="password" id="password" placeholder="Enter your password" name="password" required ngModel #password="ngModel">
+            </div>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <div class="password-input-container">
+              <input type="password" id="confirmPassword" placeholder="Confirm your password" name="confirmPassword" required ngModel #confirmPassword="ngModel">
+            </div>
+          </div>
+        </div>
+        <div class="checkbox-container">
+          <input class="check" type="checkbox" id="terms" required>
+          <label for="terms">I agree to the <strong>Terms of Policy</strong></label>
+        </div>
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+        <div class="input-box" style="color: red;"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>   {{msg}}</div>
+        <br>
+        <div class="input-box">
+          <a routerLink="/home" style="color:aqua">BACK TO HOME</a>
+      </div>
+      </form>
+    </div>
+  </div>
+</body>

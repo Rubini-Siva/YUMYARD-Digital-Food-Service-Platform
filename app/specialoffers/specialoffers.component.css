@@ -1,0 +1,101 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.hero{
+  width: 100%;
+  height: 100vh;
+  background-color: #e9b2c5;
+  position: relative;
+}
+.box{
+  width: 500px;
+  min-height: 500px;
+  background-color: #FFF;
+  text-align: center;
+  padding: 50px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  color: #555;
+}
+.box h2{
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.box h1{
+  font-size: 70px;
+  font-weight: 500;
+  color: #ff2166;
+  margin-bottom: 20px;
+}
+.box h1 span{
+  font-size: 22px;
+  color: #555;
+}
+.box p:first-of-type{
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.box p:last-of-type{
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.box .btn{
+  display: block;
+  background-color: #ff2166;
+  color: #FFF;
+  outline: 0;
+  border: 0;
+  padding: 12px 40px;
+  margin: 30px auto;
+  border-radius: 30px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.box img{
+  width: 350px;
+  height: 355x;
+}
+.box .ribbon-wrap{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  overflow: hidden;
+}
+.box .ribbon-wrap::before, .box .ribbon-wrap::after{
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #f2467b;
+  position: absolute;
+  z-index: -1;
+}
+.box .ribbon-wrap::before{
+  top: 0;
+  right: 0;
+}
+.ribbon-wrap::after{
+  bottom: 0;
+  left: 0;
+}
+.ribbon{
+  width: 225px;
+  text-align: center;
+  font-size: 15px;
+  padding: 8px 0;
+  background-color: #ff2166;
+  color: #FFF;
+  position: absolute;
+  transform: rotate(-45deg);
+  top: 29%;
+  right: -17%;
+}

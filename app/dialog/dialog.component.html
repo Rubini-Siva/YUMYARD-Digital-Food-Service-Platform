@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Edit Price</h1>
+<div mat-dialog-content>
+  <p>Current Price: {{ data.currentPrice }}</p>
+  <mat-form-field>
+    <input matInput type="number" placeholder="New Price" [(ngModel)]="data.newPrice" (keydown.enter)="onEnter()">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancelClick()">Cancel</button>
+  <button mat-button (click)="onEnter()">Save</button>
+</div>

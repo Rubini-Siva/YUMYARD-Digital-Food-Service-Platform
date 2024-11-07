@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Online Payment-Page</title>
+</head>
+
+<body>
+	<div class="container">
+		<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+			<div class="row">
+				<div class="col">
+					<h3 class="title">Billing Address</h3>
+					<div class="inputBox">
+						<label for="name">Full Name:</label>
+						<input type="text" id="name" name="name" placeholder="Enter your full name" required ngModel #name="ngModel">
+					</div>
+					<div class="inputBox">
+						<label for="email">Email:</label>
+						<input type="email" id="email" name="email" placeholder="Enter email address" required ngModel #email="ngModel">
+					</div>
+					<div class="inputBox">
+						<label for="address">Address:</label>
+						<input type="text" id="address" name="address" placeholder="Enter address" required ngModel #address="ngModel">
+					</div>
+					<div class="inputBox">
+						<label for="city">City:</label>
+						<input type="text" id="city" name="city" placeholder="Enter city" required ngModel #city="ngModel">
+					</div>
+					<div class="flex">
+						<div class="inputBox">
+							<label for="state">State:</label>
+							<input type="text" id="state" name="state" placeholder="Enter state" required ngModel #state="ngModel">
+						</div>
+						<div class="inputBox">
+							<label for="zip">Zip Code:</label>
+							<input type="number" id="zip" name="zip" placeholder="123 456" required ngModel #zip="ngModel">
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<h3 class="title">Payment</h3>
+					<div class="inputBox">
+						<label for="name">Card Accepted:</label>
+						<img src="../../assets/img/card1.png" alt="credit/debit card image">
+					</div>
+					<div class="inputBox">
+						<label for="cardName">Name On Card:</label>
+						<input type="text" id="cardName" name="cardname" placeholder="Enter card name" required ngModel #cardname="ngModel">
+					</div>
+					<div class="inputBox">
+						<label for="cardNum">Credit Card Number:</label>
+						<input type="text" id="cardNum" name="cardnum" placeholder="1111-2222-3333-4444" maxlength="19" required ngModel #cardnum="ngModel">
+					</div>
+          <div class="inputBox">
+            <label for="month">Exp Month:</label>
+            <select id="month" name="month" [(ngModel)]="selectedMonth" required>
+                <option value="">Choose month</option>
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+          </div>
+          <div class="inputBox">
+            <label for="year">Exp Year:</label>
+            <select id="year" name="year" [(ngModel)]="selectedYear" required>
+                <option value="">Choose Year</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+            </select>
+          </div>
+					<div class="inputBox">
+							<label for="cvv">CVV</label>
+							<input type="number" id="cvv" name="cvv" placeholder="1234" required ngModel #cvv="ngModel">
+					</div>
+			  </div>
+			</div>
+			<input type="submit" value="Pay" class="submit_btn">
+      <!-- <div class="input-box" style="color: red;"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>   {{msg}}</div> -->
+      <div class="input-box">
+        <a routerLink="/foodpage" style="text-align: center; color:rgb(75, 178, 242)">BACK</a>
+    </div>
+	  </form>
+	</div>
+</body>
+</html>

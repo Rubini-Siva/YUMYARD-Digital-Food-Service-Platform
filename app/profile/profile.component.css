@@ -1,0 +1,51 @@
+.container {
+  margin: 20px;
+  max-width: 1000px;
+  max-height: 1500px;
+  padding-top: 50px;
+  padding-left: 150px;
+}
+
+.result-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 4px solid;
+  border-image: linear-gradient(to right, #f00, #ff0, #0f0, #0ff, #00f); /* Gradient border effect */
+  border-image-slice: 1;
+  box-shadow: 6px 12px 24px linear-gradient(to right, rgb(255, 0, 0), rgb(255, 255, 0), rgb(0, 255, 0), rgb(0, 255, 255), rgb(0, 0, 255)); /* Enhanced box shadow */
+  transition: box-shadow 0.3s, border-color 0.3s; /* Border and shadow animation */
+  border-radius: 8px; /* Rounded corners */
+  animation: pulsate 5s infinite; /* Border color pulsating animation */
+}
+
+.result-table:hover {
+  box-shadow: 50px 50px 50px rgb(0, 0, 0,0.3); /* Enhanced shadow on hover */
+  transition: box-shadow 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+
+.result-table td, .result-table th {
+  padding: 14px; /* Increase cell padding */
+  text-align: left;
+  border-bottom: 1px solid #ddd; /* Border between rows */
+  font-size: 23px; /* Increase text size */
+}
+
+.result-table th {
+  background: linear-gradient(to right, #f0f, #0ff); /* Gradient background for table header */
+  color: #fff;
+}
+
+.result-table img {
+  max-width: 500px;
+  max-height: 500px;
+  border-radius: 25%; /* Rounded image */
+  border-image: linear-gradient(to right, #f00, #ff0, #0f0, #0ff, #00f); /* Gradient border effect */
+  animation: pulsate 5s infinite; /* Border color pulsating animation */
+}
+
+@keyframes pulsate {
+  0% { border-color: #ff0000; }
+  50% { border-color: #00ff00; }
+  100% { border-color: #0000ff; }
+}

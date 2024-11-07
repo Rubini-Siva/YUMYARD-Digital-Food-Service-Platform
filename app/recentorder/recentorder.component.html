@@ -1,0 +1,36 @@
+<head>
+  <link
+  rel="stylesheet"
+  href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"/>
+</head>
+<div class="container">
+  <div class="tbl_container">
+    <h2>Pending Orders</h2>
+    <table class="tbl">
+      <thead>
+        <tr>
+          <th>Order No</th>
+          <th>Order Date</th>
+          <th>Food Item</th>
+          <th>Quantity</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of recentOrders">
+          <td>{{ order.orderno }}</td>
+          <td>{{ order.orderdate }}</td>
+          <td>{{ order.productName }}</td>
+          <td>{{ order.quantity }}</td>
+          <td><i class="uil uil-exclamation-octagon"></i>  {{ order.status }}</td>
+          <td>
+            <button class="btn_edit" (click)="openStatusDialog(order)" value="Edit Status">
+              <i class="uil uil-edit">  Edit Status</i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

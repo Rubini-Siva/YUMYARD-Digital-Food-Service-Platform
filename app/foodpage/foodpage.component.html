@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"/>
+  </head>
+  <body>
+    <nav  style="background-color: rgb(115, 232, 175)">
+      <div class="logo-name">
+        <div class="logo-image">
+          <img src="../../assets/img/logo.png" alt="" />
+        </div>
+
+        <span class="logo_name">YUMYARD</span>
+      </div>
+
+      <div class="menu-items">
+        <ul class="nav-links">
+          <li>
+            <a class="nav-link" (click)="navigateToRestaurant()">
+              <i class="uil uil-estate"></i>
+              <span class="link-name">Restaurants</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" (click)="navigateToCart()" >
+              <i class="uil uil-files-landscapes"></i>
+              <span class="link-name">View Cart</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" (click)="navigateToHistory()">
+              <i class="uil uil-comments"></i>
+              <span class="link-name">Purchase History</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" (click)="navigateToUserprofile()">
+              <i class="uil uil-share"></i>
+              <span class="link-name">Profile</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="logout-mode">
+          <li>
+            <a (click)="logout()">
+              <i class="uil uil-signout"></i>
+              <span class="link-name">Logout</span>
+            </a>
+          </li>
+
+          <li class="mode">
+            <a>
+              <i class="uil uil-moon"></i>
+              <span class="link-name">Dark Mode</span>
+            </a>
+
+            <div class="mode-toggle">
+              <span class="switch"></span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="dashboard" id="recent-orders" style="background-color: rgb(198, 254, 229)">
+      <div class="top">
+        <i class="uil uil-bars sidebar-toggle"></i>
+        <label style="align-items: left; font-size: 23px; color: blue;padding-right: 30px; padding-top: 2.5px;"><i class="uil uil-user-circle" style="color: black"></i>  Welcome, {{user}} </label>
+      </div>
+      <div *ngIf="!(pageVisibilityService.isRestaurantVisible | async)
+      && !(pageVisibilityService.isCartVisible | async)
+      && !(pageVisibilityService.isHistoryVisible | async)
+      && !(pageVisibilityService.isUserprofileVisible | async)">
+      </div>
+      <div *ngIf="pageVisibilityService.isRestaurantVisible | async">
+        <app-restaurant></app-restaurant>
+      </div>
+      <div *ngIf="pageVisibilityService.isCartVisible | async">
+        <app-cartitems></app-cartitems>
+      </div>
+      <div *ngIf="pageVisibilityService.isHistoryVisible | async">
+        <app-orderhistory></app-orderhistory>
+      </div>
+      <div *ngIf="pageVisibilityService.isUserprofileVisible | async">
+        <app-userprofile></app-userprofile>
+      </div>
+    </section>
+  </body>
+</html>

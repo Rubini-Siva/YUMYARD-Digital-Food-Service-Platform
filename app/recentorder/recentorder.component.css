@@ -1,0 +1,64 @@
+.container{
+  margin-top: 2.5rem;
+  max-width: 1440px;
+  width:100%;
+  background:#f4c3f2;
+  box-shadow:2px 5px 10px rgba(0, 0, 0, 0.5);
+  font-size: 52.5px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 90vh;
+}
+.container h2{
+  padding: 2rem 1rem;
+  font-size: 3rem;
+  text-align: center;
+}
+.tbl{
+  width: 100%;
+  border-collapse:collapse;
+}
+.tbl thead{
+  background: #424949;
+  color: #fff;
+  padding: 2rem 1rem;
+}
+.tbl thead tr th{
+  font-size: 1.5rem;
+  padding: 0.8rem;
+  letter-spacing:0.2rem;
+  vertical-align:top;
+  border: 1px solid #aab7b8;
+}
+.tbl tbody tr td{
+  font-size: 1.4rem;
+  letter-spacing: 0.2rem;
+  font-weight: normal;
+  text-align: center;
+  border: 1px solid #aab7b8;
+  padding:0.8rem;
+}
+.tbl tr:nth-child(even){
+  background:#ccc;
+}
+.tbl tbody tr:nth-child(odd){
+  background:#bec0da;
+}
+.tbl tr:hover td{
+  background: #839192;
+  color: #000;
+  transition: all 0.3s ease-in;
+  cursor:pointer;
+}
+.tbl button{
+  display:inline-block;
+  border:none;
+  margin: 0 auto;
+  padding: 0.4rem;
+  border-radius: 1px;
+  outline :none;
+  cursor: pointer;
+}
+.btn_edit{
+  background: #1e8449;
+  color:#fff;
+}

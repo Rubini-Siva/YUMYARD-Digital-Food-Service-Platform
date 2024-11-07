@@ -1,0 +1,27 @@
+<div class="container">
+  <h2 style="text-align: center; justify-content: center; font-size: 25px; font-weight:900; font-style: oblique;"><i class="uil uil-user-check"></i>  Profile</h2>
+  <table class="result-table">
+    <tbody>
+      <tr *ngFor="let user of userProfile">
+        <td>Name</td>
+        <td>:</td>
+        <td>{{ user.name }}</td>
+      </tr>
+      <tr *ngFor="let user of userProfile">
+        <td>Email</td>
+        <td>:</td>
+        <td>{{ user.email }}</td>
+      </tr>
+      <tr *ngFor="let user of userProfile">
+        <td>Phone Number</td>
+        <td>:</td>
+        <td>{{ user.phone }}</td>
+      </tr>
+      <tr *ngFor="let user of userProfile">
+        <td>Address</td>
+        <td>:</td>
+        <td>{{ user.address }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

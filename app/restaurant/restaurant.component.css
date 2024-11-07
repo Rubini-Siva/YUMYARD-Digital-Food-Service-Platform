@@ -1,0 +1,306 @@
+.container{
+  margin-top: 2rem;
+  max-width: 1440px;
+  width:100%;
+  background:#cefa8c;
+  box-shadow:2px 5px 10px rgba(0,0,0,0.5);
+  font-size: 25.5px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 90vh;
+}
+.container h2{
+  padding: 2rem 1rem;
+  font-size: 3rem;
+  text-align: center;
+}
+/* root styles */
+:root {
+  /* project main colors */
+  --cyan: hsl(158, 36%, 37%);
+  --dark-cyan: hsl(158, 37%, 20%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+
+  /* font families */
+  font-family: 'Montserrat', sans-serif;
+
+  /* font sizes */
+  font-size: 14px;
+  --fs-tiny: 0.8rem;
+  --fs-regular: 1em;
+  --fs-big: 2.2em;
+
+  --fs-primary-heading: var(--fs-big);
+
+  /* project font weight */
+  --fw-500: 500;
+  --fw-700: 700;
+
+  --fw-primary-heading: var(--fw-700);
+
+  /* sizing */
+  --size-100: 0.25em;
+  --size-200: 0.50em;
+  --size-300: 0.75em;
+  --size-400: 1em;
+  --size-500: 1.25em;
+  --size-600: 1.5em;
+  --size-700: 1.75em;
+  --size-800: 2em;
+  --size-900: 2.25em;
+}
+
+/* Box sizing rules */
+
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* general styling */
+
+html,
+body {
+  height: 100vh;;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.primary-heading {
+  font-family: 'Fraunces', serif;
+}
+
+/* Utility classes */
+.text-cyan {
+  color:  hsl(158, 36%, 37%);
+}
+
+.text-cream {
+  color:hsl(30, 38%, 92%);
+}
+
+.text-very-dark-blue {
+  color:  hsl(212, 21%, 14%);
+}
+
+.text-grayish-blue {
+  color: hsl(228, 12%, 48%);
+}
+
+.text-white {
+  color:hsl(0, 0%, 100%);
+}
+
+.bg-cyan {
+  background-color: hsl(158, 37%, 20%);
+}
+
+.bg-cream {
+  background-color:  hsl(30, 38%, 92%);
+}
+
+.bg-very-dark-blue {
+  background-color: hsl(212, 21%, 14%);
+}
+
+.bg-grayish-blue {
+  background-color: hsl(228, 12%, 48%);
+}
+
+.bg-white {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.primary-heading {
+  font-size: 700;
+  font-weight: normal ;
+  line-height: 1.1;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.mono-space {
+  letter-spacing: 4px;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.fs-tiny {
+  font-size: 0.8em;
+}
+
+.mb-100 {
+  margin-bottom: 0.25em;
+}
+
+.mb-200 {
+  margin-bottom: 0.50em;
+}
+
+.mb-300 {
+  margin-bottom: 0.75em;
+}
+
+.mb-400 {
+  margin-bottom: 1em;
+}
+
+.mb-500 {
+  margin-bottom: 1.25em;
+}
+
+.mb-600 {
+  margin-bottom: 1.5em;
+}
+
+.mb-700 {
+  margin-bottom:1.75em;
+}
+
+.mb-800 {
+  margin-bottom: 2em;
+}
+
+.mb-900 {
+  margin-bottom:2.25em;
+}
+
+/* styling */
+
+.card {
+  width: 500px;
+  height:200px; /* Adjust the width as needed */
+  margin: 20px; /* Adjust margin between cards */
+  border-radius: 0.75em;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-items: flex-start;
+  align-items: center;
+}
+
+.image,
+.desc {
+  flex: 50%;
+}
+
+.desc {
+  padding: 1.25em;
+}
+
+span {
+  padding-right:0.50em;
+}
+
+.button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 80px;
+  height: 80px;
+  border: none;
+  position:relative;
+  top: 20px;
+  border-radius: 0.50em;
+  font-weight: 0.75em;
+  margin: 0;
+}
+
+.button:hover {
+  background-color:hsl(180, 98%, 84%);
+}
+
+
+
+@media screen and (min-width: 40rem) {
+  .paragraph {
+    max-width: 35ch;
+    line-height: 1.7;
+  }
+
+  .primary-heading {
+    max-width: 10ch;
+  }
+
+  .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      flex-direction: row;
+      width: 500px; /* Adjust width and margin for three cards per row */
+      height: 400px;
+      margin: 20px; /* Adjust margin between cards */
+    }
+}

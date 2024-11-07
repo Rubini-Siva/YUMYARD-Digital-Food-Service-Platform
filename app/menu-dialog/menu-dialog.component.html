@@ -1,0 +1,28 @@
+<!-- menu-dialog.component.html -->
+<html>
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"/>
+</html>
+<h2 mat-dialog-title class="dialog-title">Menu for {{ data.restaurant.resname }}</h2>
+<div mat-dialog-content class="dialog-content">
+  <table class="menu-table">
+    <thead>
+      <tr>
+        <th>Items</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Add</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let menuItem of data.menuItems">
+        <td><img [src]="menuItem.product_image" [alt]="menuItem.product_name" class="product-image"></td>
+        <td>{{ menuItem.product_name }}</td>
+        <td>{{ menuItem.product_price }}</td>
+        <td><i class="fas fa-shopping-cart cart-icon" (click)="addToCart(menuItem)"></i></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onClose()">Close</button>
+</div>

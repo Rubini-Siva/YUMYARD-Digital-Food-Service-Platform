@@ -1,0 +1,17 @@
+<h2 style="top:40px; text-align:center; font-size: 50px; font-weight: 900; color: black;">View Restaurants</h2>
+<div class="container " >
+  <div class="card bg-white" *ngFor="let restaurant of restaurants" style="margin-left: 20px; height: 400px; width: 500px;">
+    <div class="image">
+      <img [src]="restaurant.restaurantimage" [alt]="restaurant.resname" style="width:250px; height:400px;">
+    </div>
+    <div class="desc" style="background-color:cornsilk; width:250px; height:449.12px;">
+      <h1 class="primary-heading text-very-dark-blue mb-300" style="font-size: 30px; font-weight: 900; color:brown">{{ restaurant.resname }}</h1>
+      <p class="uppercase mono-space text-grayish-blue fs-tiny mb-500" style="font-size: 20px; font-weight:500; color: rgb(175, 201, 41);">{{ restaurant.restype }}</p>
+      <p class="text-grayish-blue mb-900 paragraph" style="font-size: 25px; color: rgb(201, 41, 177);">{{ restaurant.description }}</p>
+      <button class="button text-white" (click)="showMenu(restaurant)">
+        <img src="../../assets/img/menu.png" alt="menu icon" height="80" width="80" style="margin-right: 0;">
+      </button>
+    </div>
+  </div>
+</div>
+
